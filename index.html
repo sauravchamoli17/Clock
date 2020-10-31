@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Clock</title>
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="h-screen">
     
+    <div class="flex flex-col">
+       <h2 class="greeting capitalize text-4xl text-center pt-4 text-white"></h2>
+       <h1 class="text-center pt-6">
+          <span class= "time-hours text-6xl text-indigo-600"></span>
+          <span class= "time-minutes text-6xl text-green-600"></span>
+          <span class= "time-seconds text-6xl text-blue-600"></span>
+       </h1>
+    </div>
+
+    <div class="h-full flex justify-center pt-12">
+        <!-- Clock -->
+        <div class="clock w-64 h-64 border-4 border-orange-400">
+            <div class="clock-face w-full h-full p-2">
+                <div class="hand hour-hand bg-indigo-600"></div>
+                <div class="hand minute-hand bg-green-600"></div>
+                <div class="hand second-hand bg-blue-600"></div>
+            </div>
+        </div>
+    </div>
+ <script src="main.js"></script>
 </body>
 </html>

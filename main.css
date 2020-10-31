@@ -1,0 +1,17 @@
+.clock{
+    border-radius: 50%;
+    position: absolute;
+}
+.hour-hand{
+    margin-bottom: -4px;
+}
+.hand{
+    position: relative;
+    top:50%;
+    width:50%;
+    height: 4px;
+    z-index:1;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.5s cubic-bezier(0.1, 2.7, 0.58, 1);
+}

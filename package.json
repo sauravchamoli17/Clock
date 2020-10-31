@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwind build src/style.css -o main.css",
+    "build:css": "tailwind build src/styles.css -o tailwind.css",
     "git": "git add . && git commit -m",
     "postgit": "git push -u origin main"
   },
