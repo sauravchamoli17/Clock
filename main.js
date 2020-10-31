@@ -2,7 +2,7 @@
 const hourHand = document.querySelector('.hour-hand');
 const minuteHand = document.querySelector('.minute-hand');
 const secondHand = document.querySelector('.second-hand');
-
+const sound = document.querySelector('audio');
 const greeting = document.querySelector('.greeting');
 
 // Digital Clock Variables 
@@ -42,6 +42,10 @@ function setDate() {
     let seconds = now.getSeconds();
 
     let ampm = hour >= 12 ? 'pm' : 'am';
+
+    // Clock Ticking Sound 
+    sound.currentTime = 0;
+    sound.play();
     
     setGreeting(hour, ampm);
 
