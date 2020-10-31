@@ -15,22 +15,22 @@ const timeInSeconds = document.querySelector('.time-seconds');
 function setGreeting(x, y) {
 
     if (x >= 16 && x <= 11 && y == 'am') {
-        greeting.innerHTML = `good morning!`;
+        greeting.innerHTML = `good morning! 🌅`;
         document.body.style.backgroundColor = "#FFCC33";
     }
 
     else if (x >= 12 && x < 17 && y == 'pm') {
-        greeting.innerHTML = `good afternoon!`;
+        greeting.innerHTML = `good afternoon! 🌞`;
         document.body.style.backgroundColor = "#FFE484";
     }
 
     else if (x >= 17 && x <= 20 && y == 'pm'){
-        greeting.innerHTML = `good evening!`;     
+        greeting.innerHTML = `good evening! 🌇`;     
         document.body.style.backgroundColor = "#e2e8f0";
     }
     
     else {
-        greeting.innerHTML = `good night!`;     
+        greeting.innerHTML = `good night! 🌃`;     
         document.body.style.backgroundColor = "#000";
     }
 }
