@@ -14,17 +14,17 @@ const timeInSeconds = document.querySelector('.time-seconds');
 // Morning, Evening, Afternoon, Night Message 
 function setGreeting(x, y) {
 
-    if (x > 16 && x < 11 && y == 'am') {
+    if (x >= 16 && x <= 11 && y == 'am') {
         greeting.innerHTML = `good morning!`;
         document.body.style.backgroundColor = "#FFCC33";
     }
 
-    else if (x > 12 && x < 17 && y == 'pm') {
+    else if (x >= 12 && x < 17 && y == 'pm') {
         greeting.innerHTML = `good afternoon!`;
         document.body.style.backgroundColor = "#FFE484";
     }
 
-    else if (x > 17 && x < 20 && y == 'pm'){
+    else if (x >= 17 && x <= 20 && y == 'pm'){
         greeting.innerHTML = `good evening!`;     
         document.body.style.backgroundColor = "#e2e8f0";
     }
@@ -52,6 +52,14 @@ function setDate() {
     sound.currentTime = 0;
     sound.play();
 
+    //Remove Jank when seconds reaches 60
+    if (seconds === 0) {
+        hourHand.style.transition = "none";
+        minuteHand.style.transition = "none";
+        secondHand.style.transition = "none";    
+    }
+
+    // Set Greeting Function Call     
     setGreeting(hour, ampm);
 
     if (mins < 10)
@@ -73,7 +81,7 @@ function setDate() {
     timeInMinutes.innerHTML = `${mins}<span class="text-xl p-1">min</span>:`;
     timeInSeconds.innerHTML = `${seconds}<span class="text-xl p-1">sec</span>`;
 
-    document.title = `${hour}:${mins}:${seconds} Clock!`;
+    document.title = `${hour}:${mins}:${seconds} 🕒`;
 }
 
 setInterval(setDate, 1000);
