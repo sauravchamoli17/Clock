@@ -6,7 +6,7 @@ const sound = document.querySelector('.tick_sound');
 const hourSound = document.querySelector('.hour_sound');
 const greeting = document.querySelector('.greeting');
 
-// Digital Clock Variables 
+// Digital Clock Variables
 const timeInHours = document.querySelector('.time-hours');
 const timeInMinutes = document.querySelector('.time-minutes');
 const timeInSeconds = document.querySelector('.time-seconds');
