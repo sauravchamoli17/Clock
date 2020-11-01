@@ -11,7 +11,7 @@
 <body class="h-screen">
     
     <div class="flex flex-col">
-       <h2 class="greeting capitalize text-4xl text-center pt-4 text-white"></h2>
+       <h2 class="greeting capitalize text-4xl text-center pt-4 text-white font-bold"></h2>
        <h1 class="text-center pt-6">
           <span class= "time-hours text-6xl text-indigo-600"></span>
           <span class= "time-minutes text-6xl text-green-600"></span>
@@ -19,7 +19,7 @@
        </h1>
     </div>
 
-    <div class="h-full flex justify-center pt-12">
+    <div class="h-auto flex justify-center pt-12">
         <!-- Clock -->
         <div class="clock w-64 h-64 border-4 border-orange-400">
             <div class="clock-face w-full h-full p-10">
@@ -32,6 +32,16 @@
 
     <audio class="hour_sound" src="sounds/hour_clock.mp3"></audio>
     <audio class="tick_sound" src="sounds/clock-ticking.wav"></audio>
+
+    <div class="border-teal-500 rounded-b text-blue-600 px-4 py-3 mt-4 shadow-md w-2/4 mx-auto rounded facts" role="alert">
+    <div class="flex">
+        <div class="w-full">
+          <p class="font-bold text-center text-xl capitalize">random facts about time</p>
+          <p class="fact text-lg pt-2 text-center font-bold"></p>
+        </div>
+    </div>
+    </div>
+
  <script src="main.js"></script>
 </body>
 </html>

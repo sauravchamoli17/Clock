@@ -11,6 +11,28 @@ const timeInHours = document.querySelector('.time-hours');
 const timeInMinutes = document.querySelector('.time-minutes');
 const timeInSeconds = document.querySelector('.time-seconds');
 
+// Facts About Time 
+
+const facts = ['The leap year was invented by Julius Caesar in 46 BC.',
+        'The longest possible eclipse of the sun is 7.31 minutes.',
+        'The first modern clock was created by Peter Henle in around 1511.',
+        'On Mercury, a day is two years long.',
+        'One gigayear is equal to 1,000,000,000,000 years.',
+        'Until the 1800s, every village lived in its own little time zone, with clocks synchronized to the local solar noon.',
+        'A time period feels longer if it’s full of new impressions.',
+        'Time moves too quickly when we do the same things every day.',
+        'Planck time is the smallest standard of the scientific measurement of time.',
+        'According to Einstein, the distinction between past and present and future is only an illusion, however persistent.',
+        'The strontium atomic clock is the most accurate clock ever built. It’s accurate to within a second over 15 billion years.',
+        'Despite what we’ve been taught, a day isn’t a full 24 hours. It actually takes 23 hours, 56 minutes, and 4.2 seconds for the earth to rotate once.',
+        'There are 31,556,926 seconds in a year.',
+        'The sun is estimated to be around five billion years old. Earth is slightly younger than that at about 4,540,000,000 years old.',
+        'In the Roman calendar, winter was not assigned to any month. This made the entire year 304 days long, with 61 days unaccounted for in the winter.',
+        'A Julian year is 365 days and 12 months, with an extra day added to February once every four years.',
+        'In 2011, the Population Reference Bureau estimated that 250 babies are born around the world every minute.'];        
+
+const fact = document.querySelector('.fact');        
+
 // Morning, Evening, Afternoon, Night Message 
 function setGreeting(x, y) {
 
@@ -84,4 +106,11 @@ function setDate() {
     document.title = `${hour}:${mins}:${seconds} 🕒`;
 }
 
+function generateFacts() {
+    let randomFact = Math.floor(Math.random() * facts.length);
+    fact.innerHTML = facts[randomFact];
+}
+
+generateFacts();
 setInterval(setDate, 1000);
+setInterval(generateFacts, 10000);

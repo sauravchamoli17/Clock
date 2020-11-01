@@ -1,6 +1,5 @@
 .clock{
     border-radius: 50%;
-    position: absolute;
 }
 .hour-hand{
     margin-bottom: -4px;
@@ -16,75 +15,6 @@
     transition: all 0.5s cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-.twelve{
-    position: relative;
-    top:-80%;
-    left:43%;
-}
-
-.one{
-    position: relative;
-    top:-24%;
-    left:75%;
-}
-
-.two{
-    position: relative;
-    top:-5%;
-    left:84%;
-    transform: skew(-15deg);
-}
-
-.three{
-    position: relative;
-    top:28%;
-    left:84%;
-}
-
-.four{
-    position: relative;
-    top:60%;
-    left:66%;
-}
-
-.five{
-    position: relative;
-    top:86%;
-    left:30%;
-}
-
-.six{
-    position: relative;
-    top: 94%;
-    left: -20%;
-}
-
-.seven{
-    position: relative;
-    top:62.5%;
-    left:10%;
-}
-
-.eight{
-    position: relative;
-    top:36%;
-    left:-38%;
-}
-
-.nine{
-    position: relative;
-    top:2%;
-    left:-70%;
-}
-
-.ten{
-    position: relative;
-    top:-31%;
-    left:-75%;
-}
-
-.eleven{
-    position: relative;
-    top:-50%;
-    left:-67%;
+.fact{
+    transition: all 2s ease-in-out;
 }
