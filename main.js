@@ -36,7 +36,7 @@ const fact = document.querySelector('.fact');
 // Morning, Evening, Afternoon, Night Message 
 function setGreeting(x, y) {
 
-    if (x >= 16 && x <= 11 && y == 'am') {
+    if (x >= 4 && x <= 11 && y == 'am') {
         greeting.innerHTML = `good morning! 🌅`;
         document.body.style.backgroundColor = "#FFCC33";
     }
